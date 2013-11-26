@@ -12,6 +12,7 @@ var POLLTIME = 30000; //ms
 var MODBUS_PORT = 1502;
 //var HP_COMMAND = "hp/hp_mockup.sh";
 var HP_COMMAND = "hp/spawn_hp.sh";
+var EXPECTED_PARAM_LENGTH = 118;
 
 /*
  * Variables
@@ -70,7 +71,7 @@ setInterval(function() {
       */  
       var params = text.split("&");
       
-      console.log("Length: %d", params.length)
+      //console.log("Length: %d", params.length)
       /*
       ** Now, let's split param from value
       */
