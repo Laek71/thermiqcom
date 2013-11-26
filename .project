@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>thermiqcom</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.eclipsesource.jshint.ui.builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.nodeclipse.ui.NodeNature</nature>
+		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>hp/hp_mockup.sh</name>
+			<type>1</type>
+			<location>/Users/laek/Documents/workspace/thermiacom/hp/hp_mockup.sh</location>
+		</link>
+		<link>
+			<name>hp/spawn_hp.sh</name>
+			<type>1</type>
+			<location>/Users/laek/Documents/workspace/thermiacom/hp/spawn_hp.sh</location>
+		</link>
+	</linkedResources>
+</projectDescription>
