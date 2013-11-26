@@ -9,7 +9,7 @@ var FC = require('modbus-stack').FUNCTION_CODES;
  * Constants
  */
 var POLLTIME = 30000; //ms
-var MODBUS_PORT = 502;
+var MODBUS_PORT = 1502;
 //var HP_COMMAND = "hp/hp_mockup.sh";
 var HP_COMMAND = "hp/spawn_hp.sh";
 
