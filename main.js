@@ -36,9 +36,8 @@ handlers[FC.READ_INPUT_REGISTERS] = function(request, response) {
 	for (var i=0; i<length; i++) {
 		resp[i] = input_register[start+i];
 	}
-	setTimeout(function() {
-		response.writeResponse(resp);
-	}, 800);
+	
+	response.writeResponse(resp);
 }
 
 /*
