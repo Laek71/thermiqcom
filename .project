@@ -19,12 +19,12 @@
 		<link>
 			<name>hp/hp_mockup.sh</name>
 			<type>1</type>
-			<location>/Users/laek/Documents/workspace/thermiacom/hp/hp_mockup.sh</location>
+			<location>/Users/laek/Documents/workspace/thermiqcom/hp/hp_mockup.sh</location>
 		</link>
 		<link>
 			<name>hp/spawn_hp.sh</name>
 			<type>1</type>
-			<location>/Users/laek/Documents/workspace/thermiacom/hp/spawn_hp.sh</location>
+			<location>/Users/laek/Documents/workspace/thermiqcom/hp/spawn_hp.sh</location>
 		</link>
 	</linkedResources>
 </projectDescription>
