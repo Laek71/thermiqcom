@@ -21,7 +21,9 @@ var i=0;
 var handlers = {};
 var input_register = [];
 
-// Handler for Coils
+/*
+ *
+ */ Handler for Coils
 handlers[FC.READ_COILS] = function(request, response) {
 	response.writeException(2);
 }
