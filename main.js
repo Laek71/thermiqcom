@@ -22,13 +22,6 @@ var handlers = {};
 var input_register = [];
 
 /*
- *
- */ Handler for Coils
-handlers[FC.READ_COILS] = function(request, response) {
-	response.writeException(2);
-}
-
-/*
  * Handler for input registers
  */ 
 handlers[FC.READ_INPUT_REGISTERS] = function(request, response) {
@@ -47,6 +40,15 @@ handlers[FC.READ_INPUT_REGISTERS] = function(request, response) {
  * Start modbus server
  */
 require('modbus-stack/server').createServer(handlers).listen(MODBUS_PORT);
+
+/*
+ * Try catching this annoying error
+ */
+process.on('uncaughtException', function(err) {
+    // handle the error safely
+	console.log("Catching the error");
+	console.log(err);
+});
 
 /*
 ** Function to run an external command
