@@ -42,15 +42,6 @@ handlers[FC.READ_INPUT_REGISTERS] = function(request, response) {
 require('modbus-stack/server').createServer(handlers).listen(MODBUS_PORT);
 
 /*
- * Try catching this annoying error
- */
-process.on('uncaughtException', function(err) {
-    // handle the error safely
-	console.log("Catching the error");
-	console.log(err);
-});
-
-/*
 ** Function to run an external command
 */
 function run_cmd(cmd, args, callBack ) {
