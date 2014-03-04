@@ -3,6 +3,8 @@
 ** data from a Thermiq card connected to a Thermia heatpump. It then presents
 ** the data as a modbus TCP server on port 502.
 */
+var mqtt = require('mqtt'), 
+	client = mqtt.createClient(1883,"test.mosquitto.org");
 var FC = require('modbus-stack').FUNCTION_CODES;
 
 /*
@@ -80,6 +82,10 @@ setInterval(function() {
          input_register[i] = split[1];
          
          //console.log("Input register:%s, Value:%s", i, input_register[i]);
+         /*
+          * Post the data to a MQTT broker
+          */
+         client.publish('/hp/raw/'+i, split[1], {retain: true});
          
       }
    });
