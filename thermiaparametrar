@@ -1,0 +1,131 @@
+0	Utomhustemp.
+1	Rumstemp. är
+2	Rumstemp. är, decimal
+3	Rumstemp. bör
+4	Rumstemp. bör, decimal
+5	Framledningstemp.
+6	Returledningstemp.
+7	Varmvattentemp.
+8	Brine ut temp.
+9	Brine in temp.
+10	Kylning temp.
+11	Framledn.temp., shunt
+12	Strömförbrukning
+13	Tillsats 3 kW
+13	Tillsats 6 kW
+14	Framledningstemp., bör
+15	Framledn.temp., shunt, bör
+16	Brinepump
+16	Kompressor
+16	Cirkulationspump
+16	Varmvattenprod.
+16	Tillsats 2
+16	Shunt -
+16	Shunt +
+16	Tillsats 1
+17	Shuntgrupp -
+17	Shuntgrupp +
+17	Shunt kylning -
+17	Shunt kylning +
+17	Aktiv kyla
+17	Passiv kyla
+17	Larm
+18	STATUS1
+19	Larm högtr.pressostat
+19	Larm lågtr.pressostat
+19	Larm motorskydd
+19	Larm lågtemp. brine
+19	Larm lågflöde brine
+20	Larm utegivare
+20	Larm framledn.givare
+20	Larm returledn.givare
+20	Larm varmvattengivare
+20	Larm rumsgivare
+20	Larm överhettningsskydd
+20	Larm fel fasföljd
+21	BEHOV1	
+22	BEHOV2	
+23	Tryckrörtemp.
+24	Varmv.framledn.temp
+25	Integral
+26	Integral, uppnådd A-gräns	
+27	Avfrostning
+28	Minimum tid till start
+29	Programversion	
+30	Cirk.pump fart
+31	Brinepump fart
+32	STATUS3	
+50	Rumstemp., bör
+51	Driftläge
+52	Kurva
+53	Kurva min
+54	Kurva max
+55	Kurva +5
+56	Kurva 0
+57	Kurva -5
+58	Värmestopp
+59	Temp. sänkning
+60	Rumfaktor
+61	Shunt kurva
+62	Shunt kurva min
+63	Shunt kurva max
+64	Shunt kurva, bör
+65	Shunt kurva, är
+66	Utestopp temp, (20=-20C)
+67	Tryckrör, temp.gräns
+68	Varmvatten starttemp.
+69	Varmvattentid
+70	Värmetid
+71	Legionella intervall
+72	Legionella stopptemp.
+73	Integralgräns A1
+74	Hysteresgräns, värmepump
+75	Returledningstemp., maxgräns
+76	Minimum startintervall
+77	Brinetemp., min.gräns (-15=AV)
+78	Kyla, bör
+79	Integralgräns A2
+80	Hysteresgräns, tillsats
+81	Max steg, tillsats
+82	Strömförbrukn., maxgräns
+83	Shunttid
+84	Varmvatten stopptemp.
+85	Manuell test läge
+86	STATUS7	
+87	Språk
+88	STATUS8	
+89	Fabriksinställningar
+90	Nollställ drifttider
+91	Kalibrering utegivare
+92	Kalibrering framledn.givare
+93	Kalibrering returledn.givare
+94	Kalibrering varmvattengivare
+95	Kalibrering brine ut
+96	Kalibrering brine in
+97	Värmesystemtyp 0=VL 4=D
+98	Tillägg fasmätning
+98	TILL2
+98	Tillägg HGW
+98	TILL4
+98	TILL5
+98	TILL6
+98	Tillägg Optimum
+98	Tillägg flödesvakt
+99	Loggtid
+100	Brinetid på
+101	Brinetid av
+102	Legionella topptid aktiv
+103	Legionella topptid
+104	Drifttid kompressor
+105	STATUS9		
+106	Drifttid 3 kW
+107	STATUS10	
+108	Drifttid varmv.prod. med kompr.
+109	STATUS11	
+110	Drifttid passiv kyla
+111	STATUS12	
+112	Drifttid aktiv kyla
+113	STATUS13	
+114	Drifttid 6 kW
+115	STATUS14	
+116	STATUS15	
