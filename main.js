@@ -85,7 +85,10 @@ setInterval(function() {
          /*
           * Post the data to a MQTT broker
           */
-         client.publish('/hp/raw/'+i, split[1], {retain: true});
+         if(i<11) {
+        	 client.publish('/hp/raw/'+i, split[1], {retain: true});
+         }
+         
          
       }
    });
