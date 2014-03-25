@@ -3,12 +3,14 @@
 ** data from a Thermiq card connected to a Thermia heatpump. It then presents
 ** the data as a modbus TCP server on port 502.
 */
+var moment = require('moment');
 var mqtt = require('mqtt'), 
 	client = mqtt.createClient(1883,"mqtt.leapy.se");
 var FC = require('modbus-stack').FUNCTION_CODES;
 
 var paramtext = ["outdoor_temp", "indoor_temp", "indoor_temp_dec", "indoor_target_temp", "indoor_target_temp_dec", "supplyline_temp",
              "returnline_temp", "hotwater_temp", "brine_out_temp", "brine_in_temp", "cooling_temp", "upplyline_temp"]; 
+var now;
 /*
  * Constants
  */
@@ -85,10 +87,15 @@ setInterval(function() {
          
          //console.log("Input register:%s, Value:%s", i, input_register[i]);
          /*
+          * Create timestamp in EPOCH
+          */
+         now = moment().utc();
+
+         /*
           * Post the data to a MQTT broker
           */
          if(i<11) {
-        	 client.publish('/gid/rpi1001/sid/hp/'+paramtext[i], split[1], {retain: false});
+        	 client.publish('/gid/rpi1001/sid/hp/'+paramtext[i], '{"time":"'+now+'","value":"'+split[1]+'"}', {retain: false});
          }
          
          
