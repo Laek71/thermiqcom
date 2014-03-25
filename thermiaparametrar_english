@@ -1,0 +1,131 @@
+0	Outdoor temp.	4	C
+1	Indoor temp.	20	C
+2	Indoor temp., decimal	0	0.1C
+3	Indoor target temp.	20	C
+4	Indoor target temp., decimal	0	0.1C
+5	Supplyline temp.	39	C
+6	Returnline temp.	35	C
+7	Hotwater temp.	52	C
+8	Brine out temp.	6	C
+9	Brine in temp.	2	C
+10	Cooling temp.	-40	C
+11	Supplyline temp., shunt	0	C
+12	Electrical Current	0	A
+13	Aux. heater 3 kW	0	Boolean
+13	Aux. heater 6 kW	0	Boolean
+14	Supplyline target temp.	37	C
+15	Supplyline target temp., shunt	37	C
+16	Brinepump	1	Boolean
+16	Compressor	1	Boolean
+16	Flowlinepump	1	Boolean
+16	Hotwater production.	0	Boolean
+16	Auxilliary 2	0	Boolean
+16	Shunt -	0	Boolean
+16	Shunt +	0	Boolean
+16	Auxilliary 1	0	Boolean
+17	Shuntgroup -	0	Boolean
+17	Shuntgroup +	0	Boolean
+17	Shunt cooling -	0	Boolean
+17	Shunt cooling +	0	Boolean
+17	Active cooling	0	Boolean
+17	Passive cooling	0	Boolean
+17	Alarm	0	Boolean
+18	STATUS1	0	Units
+19	Alarm highpr.pressostate	0	Boolean
+19	Alarm lowpr.pressostate	0	Boolean
+19	Alarm motorcircuit breaker	0	Boolean
+19	Alarm low temp. brine	0	Boolean
+19	Alarm low flow brine	0	Boolean
+20	Alarm outdoor t-sensor	0	Boolean
+20	Alarm supplyline t-sensor	0	Boolean
+20	Alarm returnline t-sensor	0	Boolean
+20	Alarm hotw. t-sensor	0	Boolean
+20	Alarm indoor t-sensor	1	Boolean
+20	Alarm overheating	0	Boolean
+20	Alarm incorrect 3-phase order	0	Boolean
+21	DEMAND1	0	
+22	DEMAND2	128	
+23	Pressurepipe temp.	79	C
+24	Hotw. supplyline temp.	0	C
+25	Integral	-5	C*min
+26	Integral, reached A-limit	0	
+27	Defrost	127	*10s
+28	Minimum time to start	0	min
+29	Program version	8	
+30	Flowlinepump speed	4	%
+31	Brinepump speed	2	%
+32	STATUS3	0	
+50	Indoor target temp.	20	C
+51	Mode	1	läge #
+52	Curve	40	C
+53	Curve min	10	C
+54	Curve max	55	C
+55	Curve +5	1	C
+56	Curve 0	1	C
+57	Curve -5	0	C
+58	Heatstop	17	C
+59	Temp. reduction	2	C
+60	Room factor	2	C
+61	Curve 2	40	C
+62	Curve 2 min	10	C
+63	Curve 2 max	55	C
+64	Curve 2, Target	0	C
+65	Curve 2, Actual	0	C
+66	Outdoor stop temp. (20=-20C)	0	C
+67	Pressurepipe, temp. limit	60	C
+68	Hotwater starttemp.	44	C
+69	Hotwater operating time	20	min
+70	Heatpump operating time	20	min
+71	Legionella interval	14	days
+72	Legionella stop temp.	60	C
+73	Integral limit A1	60	C*min
+74	Hysteresis, heatpump	7	C
+75	Returnline temp., max limit	48	C
+76	Minimum starting interval	20	min
+77	Brinetemp., min limit (-15=OFFV)	-15	C
+78	Cooling, target	16	C
+79	Integral limit A2	60	10 C*min
+80	Hysteresis limit, aux	15	C
+81	Max step, aux	2	# steps
+82	Electrical current, max limit	20	A
+83	Shunt time	60	s
+84	Hotwater stop temp.	60	C
+85	Manual test mode	0	mode #
+86	STATUS7	0	
+87	Language	0	language #
+88	STATUS8	0	
+89	Factory settings	0	setting #
+90	Reset runtime counters	0	Boolean
+91	Calibration outdoor sensor	0	C
+92	Calibration supplyline sensor	0	C
+93	Calibration returnline sensor	0	C
+94	Calibration hotwater sensor	0	C
+95	Calibration brine out sensor	0	C
+96	Calibration brine in sensor	0	C
+97	Heating system type 0=VL 4=D	0	type #
+98	Add-on phase order measurement	0	Boolean
+98	TILL2	1	Boolean
+98	Add-on HGW	0	Boolean
+98	TILL4	0	Boolean
+98	TILL5	0	Boolean
+98	TILL6	0	Boolean
+98	Add-on Optimum	0	Boolean
+98	Add-on flow guard	0	Boolean
+99	Logging time	1	min
+100	Brine run-out duration	3	10 s
+101	Brine run-in duration	3	10 s
+102	Legionella peak heating enable	0	Boolean
+103	Legionella peak heating duration	1	h
+104	Runtime compressor	-28487	h
+105	STATUS9	-4720	
+106	Runtime 3 kW	1517	h
+107	STATUS10	19461	
+108	Runtime hotwater production	9292	h
+109	STATUS11	36	
+110	Runtime passive cooling	0	h
+111	STATUS12	0	
+112	Runtime active cooling	0	h
+113	STATUS13	-30464	
+114	Runtime 6 kW	137	h
+115	STATUS14	4864	
+116	STATUS15	0	

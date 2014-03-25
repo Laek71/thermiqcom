@@ -4,9 +4,11 @@
 ** the data as a modbus TCP server on port 502.
 */
 var mqtt = require('mqtt'), 
-	client = mqtt.createClient(1883,"test.mosquitto.org");
+	client = mqtt.createClient(1883,"mqtt.leapy.se");
 var FC = require('modbus-stack').FUNCTION_CODES;
 
+var paramtext = ["outdoor_temp", "indoor_temp", "indoor_temp_dec", "indoor_target_temp", "indoor_target_temp_dec", "supplyline_temp" \
+             "returnline_temp", "hotwater_temp", "brine_out_temp", "brine_in_temp", "cooling_temp", "upplyline_temp"]; 
 /*
  * Constants
  */
@@ -86,7 +88,7 @@ setInterval(function() {
           * Post the data to a MQTT broker
           */
          if(i<11) {
-        	 client.publish('/hp/raw/'+i, split[1], {retain: true});
+        	 client.publish('/gid/rpi1001/sid/hp/'+paramtext[i], split[1], {retain: false});
          }
          
          
