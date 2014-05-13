@@ -67,6 +67,11 @@ setInterval(function() {
    run_cmd(HP_COMMAND,[""], function(text) {
    //run_cmd("hp/spawn_hp.sh",[""], function(text) {
 
+			/*
+			* Create timestamp in EPOCH
+			*/
+			now = moment().utc();
+			
       /*
       ** The output is a long string of param=value separated by &.
       ** Let's first split it into separate param=value fields
@@ -88,10 +93,6 @@ setInterval(function() {
          input_register[i] = split[1];
 
          //console.log("Input register:%s, Value:%s", i, input_register[i]);
-         /*
-          * Create timestamp in EPOCH
-          */
-         now = moment().utc();
 
          /*
           * Post the data to a MQTT broker
