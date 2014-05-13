@@ -4,12 +4,13 @@
 ** the data as a modbus TCP server on port 502.
 */
 var moment = require('moment');
-var mqtt = require('mqtt'), 
+var mqtt = require('mqtt'),
 	client = mqtt.createClient(1883,"mqtt.leapy.se");
 var FC = require('modbus-stack').FUNCTION_CODES;
 
 var paramtext = ["outdoor_temp", "indoor_temp", "indoor_temp_dec", "indoor_target_temp", "indoor_target_temp_dec", "supplyline_temp",
-             "returnline_temp", "hotwater_temp", "brine_out_temp", "brine_in_temp", "cooling_temp", "upplyline_temp"]; 
+             "returnline_temp", "hotwater_temp", "brine_out_temp", "brine_in_temp", "cooling_temp", "supplyline_temp_shunt",
+						 "electrical_current", "aux_heaters_reg", "supplyline_target_temp", "supplyline_target_temp_shunt"];
 var now;
 /*
  * Constants
@@ -29,7 +30,7 @@ var input_register = [];
 
 /*
  * Handler for input registers
- */ 
+ */
 handlers[FC.READ_INPUT_REGISTERS] = function(request, response) {
 	var start = request.startAddress;
 	var length = request.quantity;
@@ -38,7 +39,7 @@ handlers[FC.READ_INPUT_REGISTERS] = function(request, response) {
 	for (var i=0; i<length; i++) {
 		resp[i] = input_register[start+i];
 	}
-	
+
 	response.writeResponse(resp);
 }
 
@@ -62,29 +63,30 @@ function run_cmd(cmd, args, callBack ) {
 /*
 ** Interval timer event to ask for heatpump data
 */
-setInterval(function() { 
+setInterval(function() {
    run_cmd(HP_COMMAND,[""], function(text) {
    //run_cmd("hp/spawn_hp.sh",[""], function(text) {
 
       /*
       ** The output is a long string of param=value separated by &.
       ** Let's first split it into separate param=value fields
-      */  
+      */
       var params = text.split("&");
-      
+
       //console.log("Length: %d", params.length)
+			client.publish('/lsp/rpi001/thermia/number_of_parameters', '{"time":"'+now+'","value":"'+params.length+'"}', {retain: false});
       /*
       ** Now, let's split param from value
       */
-      var split; 
+      var split;
       for(i=0;i<params.length;i++) { //change count to params.length for full list
          split = params[i].split("=");
-         
+
          /*
           * Load the value into a input register array
           */
          input_register[i] = split[1];
-         
+
          //console.log("Input register:%s, Value:%s", i, input_register[i]);
          /*
           * Create timestamp in EPOCH
@@ -94,12 +96,11 @@ setInterval(function() {
          /*
           * Post the data to a MQTT broker
           */
-         if(i<11) {
-        	 client.publish('/gid/rpi1001/sid/hp/'+paramtext[i], '{"time":"'+now+'","value":"'+split[1]+'"}', {retain: false});
+         if(i<15) {
+        	 client.publish('/lsp/rpi001/thermia/'+paramtext[i], '{"time":"'+now+'","value":"'+split[1]+'"}', {retain: false});
          }
-         
-         
+
+
       }
    });
 }, POLLTIME);
-
