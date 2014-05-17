@@ -71,16 +71,20 @@ setInterval(function() {
 			* Create timestamp in EPOCH
 			*/
 			now = moment().utc();
-			
+
       /*
       ** The output is a long string of param=value separated by &.
       ** Let's first split it into separate param=value fields
       */
       var params = text.split("&");
 
+			if (params.length !== 118)
+				return;
+				
       //console.log("Length: %d", params.length)
 			client.publish('/lsp/rpi001/thermia/number_of_parameters', '{"time":"'+now+'","value":"'+params.length+'"}', {retain: false});
-      /*
+
+			/*
       ** Now, let's split param from value
       */
       var split;
