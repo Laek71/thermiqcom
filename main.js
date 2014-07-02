@@ -81,7 +81,6 @@ setInterval(function() {
 			if (params.length !== 118)
 				return;
 
-      //console.log("Length: %d", params.length)
 			//client.publish('/lsp/rpi001/thermia/number_of_parameters', '{"time":"'+now+'","value":"'+params.length+'"}', {retain: false});
 
 			/*
