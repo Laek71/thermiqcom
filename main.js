@@ -93,8 +93,6 @@ setInterval(function() {
           */
          input_register[i] = split[1];
 
-         //console.log("Input register:%s, Value:%s", i, input_register[i]);
-
          /*
           * Post the data to a MQTT broker
           */
