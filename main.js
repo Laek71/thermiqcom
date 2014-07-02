@@ -81,8 +81,6 @@ setInterval(function() {
 			if (params.length !== 118)
 				return;
 
-			//client.publish('/lsp/rpi001/thermia/number_of_parameters', '{"time":"'+now+'","value":"'+params.length+'"}', {retain: false});
-
 			/*
       ** Now, let's split param from value
       */
