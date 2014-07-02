@@ -5,7 +5,7 @@
 */
 var moment = require('moment');
 var mqtt = require('mqtt'),
-	client = mqtt.createClient(1883,"mqtt.leapy.se");
+	client = mqtt.createSecureClient(8883,"mqtt.leapy.se");
 var FC = require('modbus-stack').FUNCTION_CODES;
 
 var paramtext = ["outdoor_temp", "indoor_temp", "indoor_temp_dec", "indoor_target_temp", "indoor_target_temp_dec", "supplyline_temp",
@@ -80,9 +80,9 @@ setInterval(function() {
 
 			if (params.length !== 118)
 				return;
-				
+
       //console.log("Length: %d", params.length)
-			client.publish('/lsp/rpi001/thermia/number_of_parameters', '{"time":"'+now+'","value":"'+params.length+'"}', {retain: false});
+			//client.publish('/lsp/rpi001/thermia/number_of_parameters', '{"time":"'+now+'","value":"'+params.length+'"}', {retain: false});
 
 			/*
       ** Now, let's split param from value
@@ -102,7 +102,7 @@ setInterval(function() {
           * Post the data to a MQTT broker
           */
          if(i<15) {
-        	 client.publish('/lsp/rpi001/thermia/'+paramtext[i], '{"time":"'+now+'","value":"'+split[1]+'"}', {retain: false});
+        	 client.publish('/lsp/rpi001/thermia/metric/'+paramtext[i], '{"time":'+now+',"value":'+split[1]+'}', {retain: false});
          }
 
 
