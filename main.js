@@ -2,6 +2,7 @@
 ** This small program spawns an external script to run Thermiq poller to read
 ** data from a Thermiq card connected to a Thermia heatpump. It then presents
 ** the data as a modbus TCP server on port 502.
+** Some of the parameters are also posted using mqtt
 */
 var moment = require('moment');
 var mqtt = require('mqtt'),
